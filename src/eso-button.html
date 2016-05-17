@@ -1,0 +1,21 @@
+<div class="td-row td-padding-top-30 td-padding-bottom-30">
+  <div class="visible-sm visible-md visible-lg td-col td-col-sm-2 td-col-md-2 td-col-lg-2"></div>
+  <div class="visible-xs visible-sm visible-md visible-lg td-col td-col-xs-12 td-col-sm-8 td-col-md-8 td-col-lg-8">
+    <div class="form-group schema-form-submit {{form.htmlClass}}">
+        <input type="submit"
+               class="{{ form.style || 'td-button td-button-primary td-button-regular td-button-block td-copy-emphasized' }} {{form.fieldHtmlClass}}"
+               value="{{form.title}}"
+               ng-disabled="form.readonly"
+               ng-if="form.type === 'eso-submit'">
+        <button class="{{ form.style || 'td-button td-button-primary td-button-regular td-button-block td-copy-emphasized' }}"
+                type="button"
+                ng-click="buttonClick($event,form)"
+                ng-disabled="form.readonly"
+                ng-if="form.type !== 'eso-submit'">
+            <span ng-if="form.icon" class="{{form.icon}}"></span>
+            {{form.title}}
+        </button>
+    </div>
+  </div>
+  <div class="schema-form-section visible-sm visible-md visible-lg td-col td-col-sm-2 td-col-md-2 td-col-lg-2"></div>
+</div>
